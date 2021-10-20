@@ -10,14 +10,14 @@ body {
     font-weight: bold;
 }
 
-body a {
-    padding: 6px;
-    border: 2px solid;
+.home {
+    padding: 4px;
+    border: 6px solid;
     float: right;
     margin-top: -160px;
     text-decoration: none;
     background-color: dimgray;
-    color: white;
+    color: black;
     margin-right: 30px;
 }
 
