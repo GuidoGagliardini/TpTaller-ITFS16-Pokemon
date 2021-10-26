@@ -10,17 +10,6 @@ body {
     font-weight: bold;
 }
 
-.home {
-    padding: 4px;
-    border: 6px solid;
-    float: right;
-    margin-top: -160px;
-    text-decoration: none;
-    background-color: dimgray;
-    color: black;
-    margin-right: 30px;
-}
-
 .form-login {
     width: 400px;
     height: 340px;
@@ -42,6 +31,7 @@ body {
     width: 240px;
     border: 1px solid blue;
     margin-bottom: 15px;
+    margin-left: auto;
     padding: 11px;
     background: white;
     font-weight: bold;
