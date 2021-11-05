@@ -1,0 +1,50 @@
+.navbar {
+    float: none;
+}
+
+body {
+    background-color: #847f7f;
+}
+
+.container {
+    margin: 5px;
+    background-color: gray;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 75px 150px;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    /*! margin: 28px; */
+    /*! padding: 15px; */
+}
+
+.logo {
+    width: 110px;
+    margin-right: 20px;
+}
+
+.h5 {
+    font-weight: bold;
+}
+
+.card {
+    height: 100%;
+}
+
+section {
+    background-color: gray;
+}
+
+.titulo,
+.subtitulo {
+    text-align: center;
+    padding-top: 20px;
+    color: yellow;
+    font-weight: bold;
+}
