@@ -3,7 +3,7 @@ window.onload = function(){
     const jsonPokemons =[
         {id: "1",
         nombre:"dunsparce",
-        imagen:"poke1.png",
+        imagen:'./imagenes/poke1.png',
         origen: "Esta basado en un tsuchinoko, que es un animal que se parece vagamente a una víbora. También guarda semejanza con un gecko leopardo por sus hábitos y la forma de su cuerpo, aunque es ápodo.",
         precio:Math.random()*100,
         especie : "Serptierra",
@@ -13,10 +13,15 @@ window.onload = function(){
         
     
     ];
-    let panelComentarios =[]
+    let panelComentarios =[];
+    const url  =  "https://pokeapi.co/api/v2/pokemon"
+    const request = new XMLHttpRequest();
+    request.open('GET', url);
+    request.responseType = "json";
+    request.send();
     const DOMitems = document.querySelector('#items');
     const DOMvaolraciones = document.querySelector('#valoraciones');
-    
+    console.log(request)
     function mostrarPokemones () {
         jsonPokemons.forEach((infoPoke)=>{
             const cardPokemon = document.createElement('div');
@@ -68,7 +73,8 @@ window.onload = function(){
             
            jsonPokemons.forEach((infoPoke)=>{
             const id = infoPoke.id;
-            console.log(id)
+            console.log(id);
+          
             const comentariosElement = document.createElement('div');
             comentariosElement.classList.add('list-group-item', 'text-right', 'mx');
             
@@ -92,16 +98,34 @@ window.onload = function(){
             const comentarioCuerpo4 = document.createElement('p');
             comentarioCuerpo4.textContent = `${infoPoke.altura}`;
 
+
+            const tituloIntermedio = document.createElement('h2');
+            tituloIntermedio.textContent= "Ingrese sus datos👇";
+
+
             const textAreaComentarios = document.createElement('textarea');
-            const comentarioBoton = document.createElement('button')
+            const comentarioBoton = document.createElement('button');
+            textAreaComentarios.setAttribute('placeholder', "Comentarios")
+           
+            const formCreate =  document.createElement('form');
+            const inputCreate = document.createElement('input');
+            inputCreate.setAttribute('placeholder', "ejemplo@1234.com")
+            
+            
+            const valoracionesAnimacion = document.createElement('div');
+            const botonValoraciones = document.createElement('button');
+            const iconoValoracion = document.createElement('i');
+            iconoValoracion.classList.add('fas-fa-star');
+            
+           
             comentarioBoton.classList.add('btn');
             comentarioBoton.classList.add('btn-block');
-            comentarioBoton.textContent  = "Agregar Comentario 📩"
+            comentarioBoton.textContent  = "Enviar 📩"
             comentarioBoton.addEventListener('click', agregoComentario);
             textAreaComentarios.textContent = "";
             
             panelComentarios.push(infoPoke);
-            console.log(panelComentarios)
+            console.log(panelComentarios);
             comentariosElement.appendChild(comentarioTitle1);
             comentariosElement.appendChild(comentarioCuerpo1);
             comentariosElement.appendChild(comentarioTitle2);
@@ -110,8 +134,15 @@ window.onload = function(){
             comentariosElement.appendChild(comentarioCuerpo3);
             comentariosElement.appendChild(comentarioTitle4);
             comentariosElement.appendChild(comentarioCuerpo4);
+            comentariosElement.appendChild(tituloIntermedio);
             comentariosElement.appendChild(textAreaComentarios);
+            comentariosElement.appendChild(formCreate);
+            comentariosElement.appendChild(valoracionesAnimacion);
+            valoracionesAnimacion.appendChild(botonValoraciones);
+            botonValoraciones.appendChild(iconoValoracion);
+            formCreate.appendChild(inputCreate);
             comentariosElement.appendChild(comentarioBoton);
+            
 
             DOMvaolraciones.appendChild(comentariosElement);
 
@@ -120,6 +151,8 @@ window.onload = function(){
         })
           
 
+        }else {
+            console.log("no clickeamos")
         }
 
     }
