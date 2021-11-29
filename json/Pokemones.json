@@ -5,7 +5,7 @@
                 {
                     "id":"1",
                     "pokemon": "Bulbasaur",
-                    "imagen":"img/bulbasaur.png",
+                    "imagen":"imagenes/bulbasaur.png",
                     "descripcion":"Este Pokémon nace con una semilla en el lomo, que brota con el paso del tiempo.",
                     "caracteristicas":[
                         {
@@ -18,7 +18,7 @@
                 {
                     "id":"2",
                     "pokemon": "Venusaur",
-                    "imagen":"img/",
+                    "imagen":"imagenes/",
                     "descripcion":"La planta florece cuando absorbe energía solar, lo cual le obliga a buscar siempre la luz del sol.",
                     "caracteristicas":[
                         {
@@ -34,7 +34,7 @@
                 {
                     "id":"3",
                     "pokemon": "Charmander",
-                    "imagen":"img/charmander.png",
+                    "imagen":"imagenes/charmander.png",
                     "descripcion":"Prefiere las cosas calientes. Dicen que cuando llueve le sale vapor de la punta de la cola.",
                     "caracteristicas":[
                         {
@@ -47,7 +47,7 @@
                 {
                     "id":"4",
                     "pokemon": "Charizard",
-                    "imagen":"img/charizard.png",
+                    "imagen":"imagenes/charizard.png",
                     "descripcion":"Escupe un fuego tan caliente que funde las rocas. Causa incendios forestales sin querer.",
                     "caracteristicas":[
                         {
@@ -63,7 +63,7 @@
                 {
                     "id":"5",
                     "pokemon": "Pikachu",
-                    "imagen":"img/pikachu.png",
+                    "imagen":"imagenes/pikachu.png",
                     "descripcion":"Cuanto más potente es la energía eléctrica que genera este Pokémon, más suaves y elásticas se vuelven las bolsas de sus mejillas.",
                     "caracteristicas":[
                         {
@@ -76,7 +76,7 @@
                 {
                     "id":"6",
                     "pokemon": "Raichu",
-                    "imagen":"img/raichu.png",
+                    "imagen":"imagenes/raichu.png",
                     "descripcion":"Su larga cola le sirve como toma de tierra para protegerse a sí mismo del alto voltaje que genera su cuerpo.",
                     "caracteristicas":[
                         {
@@ -92,7 +92,7 @@
                 {
                     "id":"7",
                     "pokemon": "Geodude",
-                    "imagen":"img/geodude.png",
+                    "imagen":"imagenes/geodude.png",
                     "descripcion":"Se suele encontrar en senderos de montaña y sitios parecidos. Conviene andar con cuidado para no pisarlo sin querer y provocar su enfado.",
                     "caracteristicas":[
                         {
@@ -105,7 +105,7 @@
                 {
                     "id":"8",
                     "pokemon": "Golem",
-                    "imagen":"img/golem.png",
+                    "imagen":"imagenes/golem.png",
                     "descripcion":"Nada más mudar la piel, su cuerpo se vuelve blando y blanquecino, pero se endurece al poco tiempo de entrar en contacto con el aire.",
                     "caracteristicas":[
                         {
@@ -121,7 +121,7 @@
                 {
                     "id":"9",
                     "pokemon": "Squirtle",
-                    "imagen":"img/squirtle.png",
+                    "imagen":"imagenes/squirtle.png",
                     "descripcion":"Cuando retrae su largo cuello en el caparazón, dispara agua a una presión increíble.",
                     "caracteristicas":[
                         {
@@ -134,7 +134,7 @@
                 {
                     "id":"10",
                     "pokemon": "Wartortle",
-                    "imagen":"img/wartortle.png",
+                    "imagen":"imagenes/wartortle.png",
                     "descripcion":"Se lo considera un símbolo de longevidad. Los ejemplares más ancianos tienen musgo sobre el caparazón.",
                     "caracteristicas":[
                         {
@@ -150,7 +150,7 @@
                 {
                     "id":"11",
                     "pokemon": "Articuno",
-                    "imagen":"img/articuno.png",
+                    "imagen":"imagenes/articuno.png",
                     "descripcion":"Se dice que sus bellas alas azules se componen de hielo. Vuela en torno a las montañas nevadas con su larga cola al viento.",
                     "caracteristicas":[
                         {
@@ -163,7 +163,7 @@
                 {
                     "id":"12",
                     "pokemon": "Delibird",
-                    "imagen":"img/delibird.png",
+                    "imagen":"imagenes/delibird.png",
                     "descripcion":"Transporta comida durante todo el día. Según dicen, muchos desaparecidos han sobrevivido gracias a ella.",
                     "caracteristicas":[
                         {
