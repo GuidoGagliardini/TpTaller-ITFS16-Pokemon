@@ -1,0 +1,177 @@
+{   
+    "pokemones":[
+        {
+            "tipoPlanta":[
+                {
+                    "id":"1",
+                    "pokemon": "Bulbasaur",
+                    "imagen":"imagenes/bulbasaur.png",
+                    "descripcion":"Este Pokémon nace con una semilla en el lomo, que brota con el paso del tiempo.",
+                    "caracteristicas":[
+                        {
+                            "habilidad":"Espesura: potencia sus movimientos de tipo Planta cuando le queda poca salud.",
+                            "altura":"0,7m",
+                            "peso":"6,9kg",
+                            "debilidades":["Fuego","Psiquico","Hielo"]
+                        }]
+                },
+                {
+                    "id":"2",
+                    "pokemon": "Venusaur",
+                    "imagen":"imagenes/",
+                    "descripcion":"La planta florece cuando absorbe energía solar, lo cual le obliga a buscar siempre la luz del sol.",
+                    "caracteristicas":[
+                        {
+                            "habilidad":"Espesura: potencia sus movimientos de tipo Planta cuando le queda poca salud.",
+                            "altura":"2m",
+                            "peso":"100kg",
+                            "debilidades":["Fuego","Psiquico","Hielo"]
+                        }]
+                }]
+        },
+        {
+            "tipoFuego":[
+                {
+                    "id":"3",
+                    "pokemon": "Charmander",
+                    "imagen":"imagenes/charmander.png",
+                    "descripcion":"Prefiere las cosas calientes. Dicen que cuando llueve le sale vapor de la punta de la cola.",
+                    "caracteristicas":[
+                        {
+                            "habilidad":"Mar Llamas: potencia sus movimientos de tipo Fuego cuando le quedan pocos PS.",
+                            "altura":"0,6m",
+                            "peso":"8,5kg",
+                            "debilidades":["Agua","Tierra","Roca"]
+                        }]
+                },
+                {
+                    "id":"4",
+                    "pokemon": "Charizard",
+                    "imagen":"imagenes/charizard.png",
+                    "descripcion":"Escupe un fuego tan caliente que funde las rocas. Causa incendios forestales sin querer.",
+                    "caracteristicas":[
+                        {
+                            "habilidad":"Mar Llamas: potencia sus movimientos de tipo Fuego cuando le quedan pocos PS.",
+                            "altura":"1,7m",
+                            "peso":"90,5kg",
+                            "debilidades":["Agua","Tierra","Roca"]
+                        }]
+                }]
+        },
+        {
+            "tipoElectrico":[
+                {
+                    "id":"5",
+                    "pokemon": "Pikachu",
+                    "imagen":"imagenes/pikachu.png",
+                    "descripcion":"Cuanto más potente es la energía eléctrica que genera este Pokémon, más suaves y elásticas se vuelven las bolsas de sus mejillas.",
+                    "caracteristicas":[
+                        {
+                            "habilidad":"Electricidad Estática: La electricidad estática que lo envuelve puede paralizar al mínimo contacto.",
+                            "altura":"0,4m",
+                            "peso":"6,0kg",
+                            "debilidades":["Tierra"]
+                        }]
+                },
+                {
+                    "id":"6",
+                    "pokemon": "Raichu",
+                    "imagen":"imagenes/raichu.png",
+                    "descripcion":"Su larga cola le sirve como toma de tierra para protegerse a sí mismo del alto voltaje que genera su cuerpo.",
+                    "caracteristicas":[
+                        {
+                            "habilidad":"Electricidad EstáticaLa electricidad estática que lo envuelve puede paralizar al mínimo contacto.",
+                            "altura":"0,8m",
+                            "peso":"30kg",
+                            "debilidades":["Tierra"]
+                        }]
+                }]
+        },
+        {
+            "tipoRoca":[
+                {
+                    "id":"7",
+                    "pokemon": "Geodude",
+                    "imagen":"imagenes/geodude.png",
+                    "descripcion":"Se suele encontrar en senderos de montaña y sitios parecidos. Conviene andar con cuidado para no pisarlo sin querer y provocar su enfado.",
+                    "caracteristicas":[
+                        {
+                            "habilidad":"Cabeza Roca:No puede dañarse con sus propios movimientos.",
+                            "altura":"0,4m",
+                            "peso":"20kg",
+                            "debilidades":["Agua","Lucha","Planta"]
+                        }]
+                },
+                {
+                    "id":"8",
+                    "pokemon": "Golem",
+                    "imagen":"imagenes/golem.png",
+                    "descripcion":"Nada más mudar la piel, su cuerpo se vuelve blando y blanquecino, pero se endurece al poco tiempo de entrar en contacto con el aire.",
+                    "caracteristicas":[
+                        {
+                            "habilidad":"RobustezEvita que el rival pueda debilitarlo de un solo golpe cuando tiene los PS al máximo. También evita los movimientos fulminantes.",
+                            "altura":"1,4m",
+                            "peso":"300kg",
+                            "debilidades":["Agua","Lucha","Planta"]
+                        }]
+                }]
+        },
+        {
+            "tipoAgua":[
+                {
+                    "id":"9",
+                    "pokemon": "Squirtle",
+                    "imagen":"imagenes/squirtle.png",
+                    "descripcion":"Cuando retrae su largo cuello en el caparazón, dispara agua a una presión increíble.",
+                    "caracteristicas":[
+                        {
+                            "habilidad":"Torrente: Potencia sus movimientos de tipo Agua cuando le quedan pocos PS.",
+                            "altura":"0,5m",
+                            "peso":"9kg",
+                            "debilidades":["Planta","Electrico"]
+                        }]
+                },
+                {
+                    "id":"10",
+                    "pokemon": "Wartortle",
+                    "imagen":"imagenes/wartortle.png",
+                    "descripcion":"Se lo considera un símbolo de longevidad. Los ejemplares más ancianos tienen musgo sobre el caparazón.",
+                    "caracteristicas":[
+                        {
+                            "habilidad":"TorrentePotencia sus movimientos de tipo Agua cuando le quedan pocos PS.",
+                            "altura":"1m",
+                            "peso":"22,5kg",
+                            "debilidades":["Planta","Electrico"]
+                        }]
+                }]
+        },
+        {
+            "tipoHielo":[
+                {
+                    "id":"11",
+                    "pokemon": "Articuno",
+                    "imagen":"imagenes/articuno.png",
+                    "descripcion":"Se dice que sus bellas alas azules se componen de hielo. Vuela en torno a las montañas nevadas con su larga cola al viento.",
+                    "caracteristicas":[
+                        {
+                            "habilidad":"Presión: Presiona al rival para que sus PP se acaben antes.",
+                            "altura":"1,7m",
+                            "peso":"55,4kg",
+                            "debilidades":["Acero","Electrico","Fuego"]
+                        }]
+                },
+                {
+                    "id":"12",
+                    "pokemon": "Delibird",
+                    "imagen":"imagenes/delibird.png",
+                    "descripcion":"Transporta comida durante todo el día. Según dicen, muchos desaparecidos han sobrevivido gracias a ella.",
+                    "caracteristicas":[
+                        {
+                            "habilidad":"Espíritu Vital:Su determinación le impide quedarse dormido.",
+                            "altura":"0,9m",
+                            "peso":"16kg",
+                            "debilidades":["Acero","Electrico","Fuego"]
+                        }]
+                }]
+        }]
+}

@@ -14,14 +14,17 @@ window.onload = function(){
     
     ];
     let panelComentarios =[];
-    const url  =  "https://pokeapi.co/api/v2/pokemon"
+   
+    const DOMitems = document.querySelector('#items');
+    const DOMvaolraciones = document.querySelector('#valoraciones');
+    
+    const url    = "./../json/pokemones.json"
+
     const request = new XMLHttpRequest();
     request.open('GET', url);
     request.responseType = "json";
     request.send();
-    const DOMitems = document.querySelector('#items');
-    const DOMvaolraciones = document.querySelector('#valoraciones');
-    console.log(request)
+    console.log(request);
     function mostrarPokemones () {
         jsonPokemons.forEach((infoPoke)=>{
             const cardPokemon = document.createElement('div');
@@ -53,15 +56,14 @@ window.onload = function(){
             cardPokemonButton.addEventListener('click', verComentarios);
             cardPokemonButton.textContent = "Caracteristicas 👉";
             
-            const valoracionPoke = document.createElement('p');
-            valoracionPoke.textContent = "⭐⭐⭐⭐⭐";
+           
 
 
             cardBodyPokemon.appendChild(cardPokemonImg);
             cardBodyPokemon.appendChild(cardPokemonTitle);
             cardBodyPokemon.appendChild(cardPokemonPrecio);
             cardBodyPokemon.appendChild(cardPokemonButton);
-            cardBodyPokemon.appendChild(valoracionPoke);
+         
             cardPokemon.appendChild(cardBodyPokemon)
             DOMitems.appendChild(cardPokemon);
     
@@ -123,6 +125,10 @@ window.onload = function(){
             comentarioBoton.textContent  = "Enviar 📩"
             comentarioBoton.addEventListener('click', agregoComentario);
             textAreaComentarios.textContent = "";
+
+            const valoracionPoke = document.createElement('p');
+            valoracionPoke.textContent = "⭐⭐⭐⭐⭐";
+            valoracionesAnimacion.appendChild(valoracionPoke);
             
             panelComentarios.push(infoPoke);
             console.log(panelComentarios);
