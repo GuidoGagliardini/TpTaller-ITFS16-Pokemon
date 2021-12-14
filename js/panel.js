@@ -13,7 +13,7 @@ else if(id==2){
 
 else{
     $(body).hide()
-    alert('Usted no tiene los permisos necesarios para entrar a esta panel de administrador')
+    alert('Usted no tiene los permisos necesarios para entrar a este panel de administrador')
     
 }
 
