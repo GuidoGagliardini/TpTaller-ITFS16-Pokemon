@@ -20,13 +20,13 @@ function mostrarPokemon(pokeJson) {
     console.log("PokeJson: " + pokeJson)
     let pokemones = []
     let i = 0
-    pokeJson.forEach(element => {
+    pokeJson.pokemones.forEach(element => {
         if (i < 6) {
 
 
 
 
-            let elementGalery = '<div class="col-md-4"><div class="card" style="width: 15rem;"> id="card' + element.id + '">';
+            let elementGalery = '<div class="col-md-4"><div class="card" style="width: 15rem;" id="card' + element.id + '">';
             elementGalery += '<img src="' + element.imagen + '" class="card-img-top" >';
             elementGalery += '<div class="card-body">';
             elementGalery += '<h5 class="card-title"><b> ' + element.pokemon + ' </b></h5>';
