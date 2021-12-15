@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/detalleproducto.css" >
     <title>Pokmenos Details</title>
     <script src="./js/detalleProducto.js"></script>
 </head>
@@ -21,7 +21,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <img class="navbar-toggler-icon" src="./imagenes/logo.png" style="width: 110px;margin-right: 20px;height: 40px;">
-            <a class="navbar-brand" href="index2.html">Home</a>
+            <a class="navbar-brand" href="index.html">Home</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span ></span>
         </button>
@@ -49,21 +49,26 @@
             </div>
             <div class="col-3 justify-content-center">
                 <h3 class="text-white">Valoraciones</h3>
-                <ul id="valoraciones" class="list-group"></ul>
+                <div id="valoraciones" class="list-group">
+                    <div class="starts">
+                        <ul id="pingStar">
+                         <li rel = "1" title = "1  "> ★ </li>
+                                    <li rel = "2" title = "2  "> ★ </li>
+                                    <li rel = "3" title = "3  "> ★ </li>
+                                    <li rel = "4" title = "4  "> ★ </li>
+                                    <li rel = "5" title = "5  "> ★ </li>
+                         <span id="dir"></span>
+                        </ul>
+                        <input type="hidden" value="" id="startP">
+                       </div>
+                </div>
+                
                 
 
             </div>
-
         </div>
 
-
-
-
     </div>
-
-
-
-
 </body>
 
 </html>

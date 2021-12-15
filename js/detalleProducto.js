@@ -18,13 +18,6 @@ window.onload = function(){
     const DOMitems = document.querySelector('#items');
     const DOMvaolraciones = document.querySelector('#valoraciones');
     
-    const url    = "./../json/pokemones.json"
-
-    const request = new XMLHttpRequest();
-    request.open('GET', url);
-    request.responseType = "json";
-    request.send();
-    console.log(request);
     function mostrarPokemones () {
         jsonPokemons.forEach((infoPoke)=>{
             const cardPokemon = document.createElement('div');
@@ -45,6 +38,10 @@ window.onload = function(){
             const cardPokemonPrecio = document.createElement('p');
             cardPokemonPrecio.classList.add('card-text');
             cardPokemonPrecio.textContent = "💲"+infoPoke.precio;
+
+            const comentarioPokeCard = document.createElement('span');
+            comentarioPokeCard.classList.add('card-text');
+            comentarioPokeCard.textContent="Para poder valorar Pokemon, debe clickear en Caracteristicas👆"
             
             
 
@@ -63,6 +60,7 @@ window.onload = function(){
             cardBodyPokemon.appendChild(cardPokemonTitle);
             cardBodyPokemon.appendChild(cardPokemonPrecio);
             cardBodyPokemon.appendChild(cardPokemonButton);
+            cardBodyPokemon.appendChild(comentarioPokeCard);
          
             cardPokemon.appendChild(cardBodyPokemon)
             DOMitems.appendChild(cardPokemon);
@@ -111,24 +109,21 @@ window.onload = function(){
            
             const formCreate =  document.createElement('form');
             const inputCreate = document.createElement('input');
-            inputCreate.setAttribute('placeholder', "ejemplo@1234.com")
+            inputCreate.setAttribute('id', "mailInput");
+            inputCreate.setAttribute('placeholder', "ejemplo@1234.com");
             
             
-            const valoracionesAnimacion = document.createElement('div');
-            const botonValoraciones = document.createElement('button');
-            const iconoValoracion = document.createElement('i');
-            iconoValoracion.classList.add('fas-fa-star');
+            
             
            
             comentarioBoton.classList.add('btn');
             comentarioBoton.classList.add('btn-block');
             comentarioBoton.textContent  = "Enviar 📩"
             comentarioBoton.addEventListener('click', agregoComentario);
+         
             textAreaComentarios.textContent = "";
 
-            const valoracionPoke = document.createElement('p');
-            valoracionPoke.textContent = "⭐⭐⭐⭐⭐";
-            valoracionesAnimacion.appendChild(valoracionPoke);
+           
             
             panelComentarios.push(infoPoke);
             console.log(panelComentarios);
@@ -143,15 +138,51 @@ window.onload = function(){
             comentariosElement.appendChild(tituloIntermedio);
             comentariosElement.appendChild(textAreaComentarios);
             comentariosElement.appendChild(formCreate);
-            comentariosElement.appendChild(valoracionesAnimacion);
-            valoracionesAnimacion.appendChild(botonValoraciones);
-            botonValoraciones.appendChild(iconoValoracion);
+           
             formCreate.appendChild(inputCreate);
             comentariosElement.appendChild(comentarioBoton);
             
 
             DOMvaolraciones.appendChild(comentariosElement);
 
+
+
+
+            //Efecto de Valoraciones
+            var s = document.getElementById("pingStar"),
+                  m = document.getElementById('dir'),
+                  n = s.getElementsByTagName("li"),
+                                     input = document.getElementById ('startP'); 
+                 clearAll = function () {
+                  for (var i = 0; i < n.length; i++) {
+                   n[i].className = '';
+                  }
+                 }
+                 for (var i = 0; i < n.length; i++) {
+                  n[i].onclick = function () {
+                   var q = this.getAttribute("rel");
+                   clearAll();
+                   input.value = q;
+                   for (var i = 0; i < q; i++) {
+                    n[i].className = 'on';
+                   }
+                   m.innerHTML = this.getAttribute("title");
+                  }
+                  n[i].onmouseover = function () {
+                   var q = this.getAttribute("rel");
+                   clearAll();
+                   for (var i = 0; i < q; i++) {
+                    n[i].className = 'on';
+                   }
+                  }
+                  n[i].onmouseout = function () {
+                   clearAll();
+                   for (var i = 0; i < input.value; i++) {
+                    n[i].className = 'on';
+                   }
+                  }
+                 }
+            //Fin efecto Valoraciones
 
     
         })
@@ -164,8 +195,11 @@ window.onload = function(){
     }
     function agregoComentario(e){
         if (e){
-            alert("Comentario Enviado!");
+            const result = document.getElementById('mailInput').value;
+            console.log(result);
+            alert(`Gracias por su comentario ${result}, sera contactado a la brevedad.`);
             //me gustaria reiniciar el textArea.
+            document.location.href = "index.html"
             verComentarios();
         }
     }

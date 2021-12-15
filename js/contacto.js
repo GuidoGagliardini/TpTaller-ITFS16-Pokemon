@@ -91,7 +91,7 @@
 };
 function envioOk(){
   console.log("Se enviaron los datos");
-  document.location.href = "index2.html";
+  document.location.href = "index.html";
 }
 
 

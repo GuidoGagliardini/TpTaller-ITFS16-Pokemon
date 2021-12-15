@@ -16,7 +16,7 @@
             "id": "2",
             "tipo": "Planta",
             "pokemon": "Venusaur",
-            "imagen": "imagenes/",
+            "imagen": "imagenes/venusaur.png",
             "descripcion": "La planta florece cuando absorbe energía solar, lo cual le obliga a buscar siempre la luz del sol.",
             "caracteristicas": [{
                 "habilidad": "Espesura: potencia sus movimientos de tipo Planta cuando le queda poca salud.",
