@@ -6,6 +6,8 @@ guido.hg@hotmail.com
 
 Drive del video = https://drive.google.com/file/d/1RkUtuoPrvFxRIxGh9aX0vXMR39eXomUI/view?usp=sharing
 
+
+Claves Login:
 user = "Admin"
 pass = 1234
 
