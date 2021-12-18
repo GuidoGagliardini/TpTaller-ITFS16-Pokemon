@@ -1,0 +1,18 @@
+{
+    "users":[
+        {
+            "idUser": 1,
+            "user":"Admin",
+            "password": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
+            "perfil": "admin",
+            "status":true
+        },
+        {
+            "idUser": 2,
+            "user":"usuario",
+            "password": "fe2592b42a727e977f055947385b709cc82b16b9a87f88c6abf3900d65d0cdc3",
+            "perfil": "admin",
+            "status":true
+        }
+    ]
+}
