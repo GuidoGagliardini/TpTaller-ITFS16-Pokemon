@@ -5,7 +5,9 @@ request.open('GET', url);
 request.responseType = 'json'; 
 request.send();
 var pokemones = '';
+const pokeTipo = [];
 const ordenPokemon = [];
+const ordenPokemonZa=[];
 
 
 
@@ -35,21 +37,30 @@ function tiposPoke (){
          tipoResult= this.innerText 
          
         pokemones.pokemones.forEach(poke =>{
+            
             if(tipoResult===poke.tipo){
                 
-                    let cardsElements =  `<div class="col"><div class="card mb-2" style="width: 18rem;" id="card ${poke.id}">`;
-                    cardsElements += `<h3>Tipo ${poke.tipo}</h3>`
-                    cardsElements += `<img src=${poke.imagen} >`;
-                    cardsElements += `<div class="card-body">`;
-                    cardsElements += `<h5 class ="card-title"> ${poke.pokemon} </h5>`;
-                    cardsElements += `<p class="card-tex">${poke.descripcion} </p>`; 
-                    cardsElements += `<a href="detalleproducto.html?${poke.id}" class="btn btn-primary">Ver mas</a>`;
-                    
-                    cardsElements += `</div></div>`;
-                    $('#tipoPokesCards').html(cardsElements);
-                    $('#tipoPokesCards').append(cardsElements);
-                    // $('#tipoPokesCards').append(cardsElements);
-                     $('#pokeCards').remove();
+                    pokeTipo.push(poke);
+                    $('#tipoPokesCards').html('');
+                    pokeTipo.forEach(poke2=>{
+                        
+                        let cardsElements =  `<div class="col"><div class="card mb-2" style="width: 18rem;" id="card ${poke2.id}">`;
+                        cardsElements += `<h3>Tipo ${poke2.tipo}</h3>`
+                        cardsElements += `<img src=${poke2.imagen} >`;
+                        cardsElements += `<div class="card-body">`;
+                        cardsElements += `<h5 class ="card-title"> ${poke2.pokemon} </h5>`;
+                        cardsElements += `<p class="card-tex">${poke2.descripcion} </p>`; 
+                        cardsElements += `<a href="detalleproducto.html?${poke2.id}" class="btn btn-primary">Ver mas</a>`;
+                        
+                        cardsElements += `</div></div>`;
+
+                        $('#tipoPokesCards').append(cardsElements);
+                        // $('#tipoPokesCards').append(cardsElements);
+                         $('#pokeCards').remove();
+
+
+                    })
+                   
 
                 
             }if(tipoResult==="TODOS"){
@@ -113,6 +124,41 @@ function ordenAz  (e){
     $('#pokeCards').append(cardsElements3);
     
 
-   })
+   });
+
+  
+}
+
+function ordenZa  (e){
+    
+    $('#pokeCards').html('');
+   pokemones.pokemones.forEach(poke=>{
+       ordenPokemonZa.push(poke);
+      
+        ordenPokemonZa.sort(function(a,b){
+            if(a.pokemon < b.pokemon){
+                return 1;
+            }if(a.pokemon>b.pokemon){
+                return -1;
+            }
+             return 0;//equivale a 0 
+        });
+
+       
+   });
+   ordenPokemonZa.forEach(poke2=>{
+    
+    let cardsElements4 =  `<div class="col"><div class="card mb-2" style="width: 18rem;" id="card ${poke2.id}">`;
+    cardsElements4 += `<img src=${poke2.imagen} >`;
+    cardsElements4 += `<div class="card-body">`;
+    cardsElements4 += `<h5 class ="card-title"> ${poke2.pokemon} </h5>`;
+    cardsElements4 += `<p class="card-tex">${poke2.descripcion} </p>`; 
+    cardsElements4 += `<a href="detalleproducto.html?${poke2.id}" class="btn btn-primary">Ver mas</a>`;
+    cardsElements4 += `</div></div>`;
+    $('#pokeCards').append(cardsElements4);
+    
+
+   });
+
   
 }

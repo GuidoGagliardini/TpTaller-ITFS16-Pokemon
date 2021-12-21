@@ -30,7 +30,7 @@ function mostrarPokemon(pokeJson) {
             elementGalery += '<h5 class="card-title"><b> ' + element.pokemon + ' </b></h5>';
             elementGalery += '<p class="card-text"> ' + element.descripcion + ' </p>';
 
-            elementGalery += '<a href="detalleproducto.html" class="btn btn-primary">Ver mas</a>';
+            elementGalery += '<a href="detalleproducto.html?'+element.id+'" class="btn btn-primary">Ver mas</a>';
             elementGalery += '<div class="btn-group">';
 
             let gallery = document.getElementById('gallery_view');
